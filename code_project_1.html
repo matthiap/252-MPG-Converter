@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MPG to KPL Converter</title>
+		<style type="text/css">
+		.form1 {
+		width:280px;
+		border:ridge 2px black;
+		padding:10px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: white;
+		}
+		body {
+		font-family: Garamond;
+		background-color: #BCD2EE;
+		}
+		</style>
+	</head>
+	<body>
+	
+	<script type="text/javascript">	
+	function m2k() {
+	with (document.Convert) {
+	if (miles.value*0.425144 != 0)
+		kilometers.value = miles.value*0.425144;
+		}
+	}
+	function k2m () {
+		with (document.Convert) {
+	if (kilometers.value*2.35215 !=0)
+	miles.value = kilometers.value*2.35215;
+		}
+	}	
+	</script>
+	
+	<h1 align="center">Mileage Converter</h1>
+	<p align="center">enter a number into either box and click convert</p>
+	<form name="Convert" class="form1">
+		<input type="text" name="miles" onblur="m2k" value=""> miles per gallon <br />
+		<input type="text" name="kilometers" onblur="k2m()" value=""> kilometers per liter <br />
+		<input type=button value="Convert"
+		onclick="m2k()">
+	</form>
+	</body>
+	<!--Made with help from codecadamy.com w3schools.com, and help with javascript function from looking at source from http://www.convertunits.com/from/mph/to/km/h-->
+</html>
